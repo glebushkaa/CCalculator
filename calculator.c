@@ -1,13 +1,14 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
+#include "basecalc.h"
 
 void start_calculator();
-int sum(int* digits, int digits_count);
 
-void main(void) 
+int main(void) 
 {
     start_calculator();
+    return 0;
 }
 
 void start_calculator() 
@@ -23,14 +24,4 @@ void start_calculator()
     printf("Sum of digits: %i\n\n\n", result);
     free(digits);
     start_calculator();
-}
-
-int sum(int* digits, int digits_count)
-{
-    int sum = 0;
-    for(int index = 0; index < digits_count; index++)
-    {
-        sum += digits[index];
-    }
-    return sum;
 }
